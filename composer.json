@@ -1,0 +1,51 @@
+{
+    "name": "simplestart/start-orm",
+    "description": "start orm",
+    "keywords": [
+        "orm",
+        "database"
+    ],      
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "Colber.Dun",
+            "email": "colber@simplestart.cn",
+            "homepage": "http://www.simplestart.cn"
+        }
+    ],
+    "require": {
+        "php": ">=7.1.0",
+        "ext-json": "*",
+        "ext-pdo": "*",
+        "psr/log": "^1.0|^2.0",
+        "psr/simple-cache": "^1.0|^2.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7|^8|^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "start\\": "src"
+        },
+        "files": [
+            "stubs/load_stubs.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "tests\\": "tests"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "think": {
+          "services": [
+            "start\\service\\ModelService",
+            "start\\service\\ValidateService",
+            "start\\service\\PaginatorService"
+          ]
+        }
+    }
+}
